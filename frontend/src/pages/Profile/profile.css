@@ -1,23 +1,70 @@
-.card-profile-stats img{
-    max-width: 86px;
-    border-radius: 50%;
-    border: 1px solid #111;
+/* profile.css */
+
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    height: 100% ;/* Adjust height to fill the remaining viewport */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
 }
 
-.email{
-    color: rgb(238,101,122);
+.card-profile {
+    width: 90%; /* Adjust width to fit the viewport */
+    max-width: 450px; /* Limit maximum width */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add some bottom margin */
 }
 
-.location{
-    color: blue;
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.calendar{
-    color: rebeccapurple;
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.contain{
-    padding-top: 70px;
+
+.details-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: space-between;
+    align-items: center; /* Ensure field names and data are vertically aligned */
+    margin-bottom: 15px;
 }
-.design{
-    background-color: antiquewhite;
+
+.detail-item {
+    flex: 1;
+    width: 100%; /* Take full width on smaller screens */
 }
+
+.detail-item h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold; /* Make field names bold */
+}
+
+.detail-item h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 0; /* Remove default margin */
+}
+
+.detail-item h3 svg {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.detail-item h3 span {
+    font-weight: normal; /* Reset font weight for data */
+}
+
+/* End of profile.css */

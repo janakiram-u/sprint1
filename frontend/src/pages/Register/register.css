@@ -1,13 +1,94 @@
-.im{
+/* register.css */
+
+.containss {
    
-    margin-left: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 80px;
+  }
+  
+  .color-card {
+    width: 450px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .im {
+    margin-bottom: 20px;
+  }
+  
+  .img-fluid {
+    width: 100%;
+    height: auto;
+  }
+  
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* End of register.css */
+  /* register.css */
+
+/* Styles for the image input */
+.file-upload {
+    position: relative;
+    overflow: hidden;
     margin-top: 10px;
-    margin-bottom: 10px;
-}
-.contains{
-    background-color: antiquewhite;
-    padding-top: 70px;
-}
-.color-card{
-    background-color: beige;
-}
+  }
+  
+  .file-upload input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  
+  .file-upload-label {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* End of register.css */
+  /* Add this CSS to your existing stylesheet */
+.input-container {
+    position: relative;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    border-radius: 10px;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Bottom border */
+    outline: none;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+  }
+  
+  .input-container input:focus {
+    border-bottom-color: #007bff; /* Change border color on focus */
+  }
+  
+  /* Optional: Add border-radius and box-shadow for rounded corners and shadow effect */
+  .input-container input {
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+  }
+  

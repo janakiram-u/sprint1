@@ -1,32 +1,35 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { AppBar, Container, Toolbar, Typography, Button } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-import { FaHome,FaUtensils } from 'react-icons/fa';
+import { FaHome, FaUtensils } from 'react-icons/fa';
+import finddubai from '../../Assests/finddubai.jpg'; // Import the finddubai image
 import './header.css'; 
 
 const Headers = () => {
   return (
-    <Navbar className="custom-navbar"  variant="dark">
-      <Container>
-    
-        <NavLink to="/" className="nav-link home-link">
-          <FaHome className="me-1" /> Home
-        </NavLink>
-     
-        <Nav className="justify " >
-          <NavLink to="/" className="nav-link restaurants-link">
-          RESTAURANTS IN DUBAI
+    <AppBar position="fixed" color="inherit" sx={{ zIndex: 1000 }} style={{backgroundColor:"mintcream"}}>
+      <Container >
+        <Toolbar>
+          <NavLink to="/" style={{ textDecoration: 'none', marginRight: 'auto' }}>
+            <img src={finddubai} alt="FindDubai" style={{ width: '80px' }} className="logo-img" /> {/* Adjust width as needed */}
           </NavLink>
-
-        </Nav>
-        <FaUtensils style={{  color:'silver', fontSize:'40px'}} /> 
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, textAlign: 'center', color: 'black' }}>
+            {/* Admin content */}
+          </Typography>
+          <Button component={NavLink} to="/" color="inherit" variant="text" sx={{ textTransform: 'none', fontSize: '18px' }}>
+            <FaHome style={{ marginRight: '8px', fontSize: '24px' }} /> Home
+          </Button>
+          <Button component={NavLink} to="/about" color="inherit" variant="text" sx={{ textTransform: 'none' , fontSize: '18px'}}>
+            About
+          </Button>
+          <Button component={NavLink} to="/contact" color="inherit" variant="text" sx={{ textTransform: 'none', fontSize: '18px' }}>
+            Contact
+          </Button>
+          {/* Add more Button components for additional pages */}
+        </Toolbar>
       </Container>
-    </Navbar>
+    </AppBar>
   );
-};
+}
 
 export default Headers;
-
-

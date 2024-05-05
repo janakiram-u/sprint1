@@ -1,129 +1,195 @@
-.dashboard {
-    background-color: #c6e2e2;
-    padding: 20px;
-    height: 85vh;
-    overflow-y: auto;
-    position: fixed;
-    width: 300px;
-    margin-top: 10px;
-    
-    border-radius: 10px;
-    border: 1px solid rgb(216, 212, 212);
-  }
-  
-  .custom-input {
-    border-radius: 5px;
-    width: 80%;
-    border: 2px solid silver;
-    
+/* home.css */
 
-  }
-  .search_btn:hover {
-    color: var(--bs-btn-hover-color);
-    background-color: #e9b150;
-    border-color: #38382b;
+/* Styling for the menu */
+/* home.css */
+
+/* Styling for the menu */
+.menu-options {
+  position: fixed;
+  margin-top: 0px;
+  left: -250px; /* Initially hide the menu */
+  width: 280px;
+  height: 85vh; /* Full height of the viewport by default */
+  background-color: #fff;
+  z-index: 1000;
+  overflow-y: auto; /* Add scrollbar if content exceeds height */
+  transition: left 0.3s ease; /* Add transition effect for smooth opening/closing */
+  border-left:1px solid whitesmoke;
+  border-right:1px solid whitesmoke;
+  padding-left: 20px;
+  padding-top: 20px;
+  background-color:snow;
+
+
 }
-  .custom-input:focus {
-    border-radius: 5px;
-    border-color: rgb(209, 203, 116); /* Change border color on focus */
-    box-shadow: 0 0 0 0.15rem rgba(18, 19, 20, 0.25); /* Optional: Add box shadow for focus effect */
-  }
-  .search_btn {
-    border-radius: 5px;
-    margin-left: 5px;
-  }
-  
-  .add_btn button {
-    border-radius: 5px;
-  }
-  
-  .filter_div {
-    margin-top: 20px;
-  }
-  
-  .export_csv .btn {
-    border-radius: 5px;
-  }
 
-  
-  .filter_price,
-  .filter_newold,
-  .filter_status {
-    margin-top: 20px;
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .menu-options {
+    height: calc(100vh + 250px); /* Adjust height for mobile view */
+    /* You can adjust the value based on your specific layout and design */
   }
-  
-  .dropdown_btn {
-    border-radius: 5px;
-  }
-  
-  .status_radio input[type="radio"] {
-    margin-right: 5px;
-  }
-  
-  /* home.css */
+}
 
-/* Style the custom search input */
-.custom-search-input {
-    border-radius: 20px; /* Add border radius */
-  }
-  
-  /* Style the icon */
-  .custom-input .input-group-text {
-    border-top-left-radius: 20px; /* Match the border radius of the input */
-    border-bottom-left-radius: 20px;
-  }
-  .custom-btn {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    /* Add any additional styles as needed */
-  } 
-  
 
-  .operation{
-    padding-top: 10px;
-    font-size: 20px;
-    font-weight:500;
-    color: rgb(56, 53, 53);
+/* Styling for the menu in mobile view */
+.menu-options.show {
+  left: 8px; /* Show the menu when class 'show' is added */
+}
 
+/* Styling for the menu icon */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the icon is above the menu */
+}
+
+
+
+
+
+
+/* Styling for the container */
+.container {
+  position: relative;
+  margin-left: 250px; /* Adjust margin to accommodate the expanded menu */
+  margin-top: 70px;
+  width:fit-content;
+}
+
+/* Styling for the table container */
+.table-container {
+  padding-left: 20px; /* Add padding to accommodate the expanded menu */
+}
+/* home.css */
+
+/* home.css */
+
+/* Styling for the search bar container */
+.searchdesign {
+  display: flex;
+ 
+  margin-bottom: auto; /* Add margin to create space between search bar and content */
+  margin-right: 10px; /* Add margin to the right end */
+  margin-left: 10px; /* Add margin to the left end */
+  margin-top: 10px;
+}
+
+/* Styling for the search input */
+.custom-input {
+  width: 250px; /* Adjust width as needed */
+  height: 30px; /* Height of the search bar */
+  padding: 5px 10px; /* Add padding to the input */
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 15px; /* Curved borders */
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+/* Styling for the search icon button */
+.search-icon {
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove button border */
+  height: 100%; /* Match the height of the search bar */
+  margin-left: -40px; /* Adjust margin to position the icon */
+  cursor: pointer; /* Add pointer cursor */
+}
+
+/* Styling for the search icon */
+.search-icon svg {
+  color: #007bff; /* Blue color */
+}
+.table-container {
+  padding-left: 20px; /* Add padding to accommodate the expanded menu */
+  overflow-y: auto; /* Add scrollbar if content exceeds height */
+}
+
+/* Adjust the height for larger screens */
+@media (min-width: 768px) {
+  .table-container {
+    height: calc(100vh - 80px); /* Adjust height based on viewport height minus other fixed elements */
   }
-  .dashboard::-webkit-scrollbar {
-    width:8px; /* Width of the scrollbar */
-    
-  }
+}
+/* home.css */
+
+/* Styling for the title */
+.restaurant {
+  font-size:xx-large; /* Adjust font size as needed */
+  font-weight: bold; /* Optionally make the font bold */
+  color: #333; /* Set text color */
+  margin-bottom: auto; /* Add margin at the bottom for spacing */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  font-style: normal;
+}
+/* Styling for scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+/* Styling for scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #d4d1d1; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Border radius of the scrollbar thumb */
+}
+
+/* Styling for scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888; /* Color of the scrollbar thumb on hover */
+}
+
+/* Styling for scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #eee; /* Color of the scrollbar track */
+}
+/* Styling for menu items */
+.titles {
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold; /* Optionally make the font bold */
+  color: #3f3f3f; /* Set text color */
+  margin-bottom: 10px; /* Add margin at the bottom for spacing */
+}
+
+/* Styling for menu item hover effect */
+.titles:hover {
   
-  .dashboard::-webkit-scrollbar-track {
-    background: #f3f1f1; /* Color of the scrollbar track */
-  }
-  
-  .dashboard::-webkit-scrollbar-thumb {
-    background: #b3b2b2; /* Color of the scrollbar thumb */
-    border-radius: 4px; /* Rounded corners for the scrollbar thumb */
-  }
-  
-  .dashboard::-webkit-scrollbar-thumb:hover {
-    background: #b36d13; /* Color of the scrollbar thumb on hover */
-  }
-  .hometop{
-   overflow-x: hidden;
-   
-  }
-  .searchdesign{
-    
-      padding-top: 30px; /* Adds 10 pixels of padding to the top */
-      padding-right: 20px; /* Adds 20 pixels of padding to the right */
-      padding-bottom: 10px; /* Adds 10 pixels of padding to the bottom */
-      padding-left: 20px; /* Adds 20 pixels of padding to the left */
-      background-color: #b3caca;
-      border-radius: 10px;
-     
-    
-      
-    }
-    
-    .table-container{
-      margin-top: 10px;
-    }
-  
-  
-  
+  cursor: pointer; /* Add pointer cursor on hover */
+}
+.bcol{
+  /* background-color:aliceblue; */
+  border: 2px solid rgb(226, 223, 223);
+  border-radius: 10px;
+}
+.operation{
+  font-size: large;
+  padding: 10px;
+  cursor: pointer;
+}
+.radios{
+  padding: 8px;
+}
+.operations{
+  padding-bottom: 10px;
+  border: 1px solid rgb(238, 235, 235);
+  border-radius: 10px;
+  padding-right: 20px;
+  margin-right: 15px;
+  margin-top:5px ;
+ 
+}
+
+.title{
+  font-size:x-large;
+ padding-top: 20px;
+ padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  background-color:white;
+  margin-right: 15px;
+  margin-top: -6px;
+  border-radius: 10px;
+
+}
