@@ -7,8 +7,8 @@
 .menu-options {
   position: fixed;
   margin-top: 0px;
-  left: -250px; /* Initially hide the menu */
-  width: 280px;
+  left: -245px; /* Initially hide the menu */
+  width: 270px;
   height: 85vh; /* Full height of the viewport by default */
   background-color: #fff;
   z-index: 1000;
@@ -26,7 +26,7 @@
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
   .menu-options {
-    height: calc(100vh + 250px); /* Adjust height for mobile view */
+    height: calc(100vh + 300px); /* Adjust height for mobile view */
     /* You can adjust the value based on your specific layout and design */
   }
 }
@@ -52,12 +52,37 @@
 
 
 
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    height: auto; /* Change height to auto for smaller screens */
+  }
+
+  .table-container {
+    height: auto; /* Adjust height for smaller screens */
+    max-height: calc(100vh - 80px); /* Limit max height for smaller screens */
+  }
+}
+
+
+
+
 /* Styling for the container */
 .container {
   position: relative;
-  margin-left: 250px; /* Adjust margin to accommodate the expanded menu */
+  margin-left: 255px; /* Adjust margin to accommodate the expanded menu */
   margin-top: 70px;
-  width:fit-content;
+  width: fit-content;
+  min-width:79%;
+  
+  
+ 
+}
+@media (max-width: 768px) {
+  .container {
+    margin-left: 250px; /* Reset margin for smaller screens */
+    width: fit-content; /* Set width to full width for smaller screens */
+  }
 }
 
 /* Styling for the table container */
@@ -101,10 +126,7 @@
 .search-icon svg {
   color: #007bff; /* Blue color */
 }
-.table-container {
-  padding-left: 20px; /* Add padding to accommodate the expanded menu */
-  overflow-y: auto; /* Add scrollbar if content exceeds height */
-}
+
 
 /* Adjust the height for larger screens */
 @media (min-width: 768px) {
@@ -162,6 +184,11 @@
   /* background-color:aliceblue; */
   border: 2px solid rgb(226, 223, 223);
   border-radius: 10px;
+ 
+  
+  
+  
+  
 }
 .operation{
   font-size: large;

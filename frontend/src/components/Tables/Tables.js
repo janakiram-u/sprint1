@@ -1,14 +1,12 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Badge from 'react-bootstrap/Badge';
-import Dropdown from 'react-bootstrap/Dropdown';
 import { BASE_URL } from '../../services/helper';
 import { NavLink } from 'react-router-dom';
 import { statuschangefunc } from "../../services/Apis";
 import { ToastContainer, toast } from "react-toastify";
 import "./table.css";
 import Paginations from '../pagination/Paginations';
-import { YourComponent } from '../../pages/Home/Home';
+
 
 const Tables = ({ userdata, deleteUser, userGet, handlePrevious, handleNext, page, pageCount, setPage }) => {
 
@@ -57,29 +55,7 @@ const Tables = ({ userdata, deleteUser, userGet, handlePrevious, handleNext, pag
                       onClick={() => deleteUser(element._id)} style={{color:"orange"}}><i className="fa-solid fa-trash"></i></span>
 
                   </Card.Text>
-{/*                  
-                    <Dropdown>
-                    <Dropdown.Toggle className='dropdown_btn' id="dropdown-basic">
-                      <Badge bg={element.status === "Active" ? "primary" : "danger"}>
-                        {element.status} <i className="fa-solid fa-angle-down"></i>
-                      </Badge>
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item onClick={() => handleChange(element._id, "Active")}>Active</Dropdown.Item>
-                      <Dropdown.Item onClick={() => handleChange(element._id, "InActive")}>InActive</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                  <div className="d-flex justify-content-between align-items-center mt-3">
-                    <NavLink to={`/userprofile/${element._id}`} className="btn btn-success">
-                      <i className="fa-solid fa-eye"></i>
-                    </NavLink>
-                    <NavLink to={`/edit/${element._id}`} style={{color:"black"}}>
-                      <i className="fa-solid fa-pen-to-square"></i>
-                    </NavLink>
-                    <button onClick={() => deleteUser(element._id)} className="btn btn-danger">
-                      <i className="fa-solid fa-trash"></i>
-                    </button>
-                  </div> */}
+
                 </Card.Body>
               </Card>
             </div>

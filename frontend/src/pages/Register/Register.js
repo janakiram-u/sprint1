@@ -5,14 +5,14 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import { FormControl, InputLabel } from '@mui/material';
+import {  InputLabel } from '@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { addData } from '../../components/context/ContextProvider';
 import { registerfunc } from '../../services/Apis';
 import Spiner from '../../components/Spiner/Spiner';
-import { CloudUpload, Email, Phone, LocationOn, Category,Name, DriveFileRenameOutline } from '@mui/icons-material'; // Import Material-UI icons
+import { CloudUpload, Email, Phone, LocationOn, Category, DriveFileRenameOutline } from '@mui/icons-material'; // Import Material-UI icons
 import './register.css';
 
 const Register = () => {
@@ -34,24 +34,20 @@ const Register = () => {
 
   const { useradd, setUseradd } = useContext(addData);
 
-  // setInput Value
   const setInputValue = (e) => {
     const { name, value } = e.target;
     setInputData({ ...inputdata, [name]: value });
   };
 
-  // status set
   const setStatusValue = (e) => {
     setStatus(e.target.value);
   };
 
-  // profile set
   const setProfile = (e) => {
     setImage(e.target.files[0]);
     setPreview(URL.createObjectURL(e.target.files[0]));
   };
 
-  //submit userdata
   const submitUserData = async (e) => {
     e.preventDefault();
 
@@ -132,7 +128,7 @@ const Register = () => {
 </div>
             <form onSubmit={submitUserData}>
               <Stack spacing={2}>
-                <Stack spacing={1}> {/* Wrap each field and its label in Stack with spacing */}
+                <Stack spacing={1}> 
                   <InputLabel className="input-container">Name</InputLabel>
                   <TextField
                     fullWidth
@@ -141,7 +137,7 @@ const Register = () => {
                     value={inputdata.name}
                     onChange={setInputValue}
                     placeholder="Enter Name"
-                    InputProps={{ startAdornment: <DriveFileRenameOutline /> }} // Icon for Name field
+                    InputProps={{ startAdornment: <DriveFileRenameOutline /> }}
                   />
                 </Stack>
                 <Stack spacing={1}>
@@ -153,7 +149,7 @@ const Register = () => {
                     value={inputdata.category}
                     onChange={setInputValue}
                     placeholder="Enter Category"
-                    InputProps={{ startAdornment: <Category /> }} // Icon for Category field
+                    InputProps={{ startAdornment: <Category /> }} 
                   />
                 </Stack>
                 <Stack spacing={1}>
@@ -165,7 +161,7 @@ const Register = () => {
                     value={inputdata.location}
                     onChange={setInputValue}
                     placeholder="Enter Your Location"
-                    InputProps={{ startAdornment: <LocationOn /> }} // Icon for Location field
+                    InputProps={{ startAdornment: <LocationOn /> }} 
                   />
                 </Stack>
                 <Stack spacing={1}>
@@ -177,7 +173,7 @@ const Register = () => {
                     value={inputdata.email}
                     onChange={setInputValue}
                     placeholder="Enter Email"
-                    InputProps={{ startAdornment: <Email /> }} // Icon for Email field
+                    InputProps={{ startAdornment: <Email /> }} 
                   />
                 </Stack>
                 <Stack spacing={1}>
@@ -189,14 +185,13 @@ const Register = () => {
                     value={inputdata.mobile}
                     onChange={setInputValue}
                     placeholder="Enter Mobile"
-                    InputProps={{ startAdornment: <Phone /> }} // Icon for Mobile field
+                    InputProps={{ startAdornment: <Phone /> }} 
                   />
                 </Stack>
                
                 <Stack spacing={1}> 
                 
   <InputLabel>Select Price Range</InputLabel>
-  {/* Wrap the Select component and its label in Stack with appropriate spacing */}
     <Select
     fullWidth
       value={inputdata.price}
@@ -214,7 +209,7 @@ const Register = () => {
 
 
   <InputLabel>Select Status</InputLabel>
-  <Stack spacing={1}> {/* Wrap the Select component and its label in Stack with appropriate spacing */}
+  <Stack spacing={1}>
     <Select
     fullWidth
       value={status}

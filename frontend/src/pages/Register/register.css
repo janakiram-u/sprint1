@@ -1,4 +1,4 @@
-/* register.css */
+
 
 .containss {
    
@@ -33,10 +33,7 @@
     width: 100%;
   }
   
-  /* End of register.css */
-  /* register.css */
 
-/* Styles for the image input */
 .file-upload {
     position: relative;
     overflow: hidden;
@@ -65,11 +62,9 @@
     cursor: pointer;
   }
   
-  /* End of register.css */
-  /* Add this CSS to your existing stylesheet */
 .input-container {
     position: relative;
-    margin-bottom: 20px; /* Adjust margin as needed */
+    margin-bottom: 20px; 
     border-radius: 10px;
   }
   
@@ -77,18 +72,17 @@
     width: 100%;
     padding: 10px;
     border: none;
-    border-bottom: 2px solid #ccc; /* Bottom border */
+    border-bottom: 2px solid #ccc; 
     outline: none;
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    transition: border-color 0.3s ease; 
   }
   
   .input-container input:focus {
-    border-bottom-color: #007bff; /* Change border color on focus */
+    border-bottom-color: #007bff; 
   }
   
-  /* Optional: Add border-radius and box-shadow for rounded corners and shadow effect */
   .input-container input {
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   }
   

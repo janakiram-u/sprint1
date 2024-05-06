@@ -205,7 +205,8 @@ const Home = () => {
             {deletedata.name.toUpperCase()} Successfully Deleted
           </Alert>
         ) : null}
-        <div className="d-flex bcol">
+        
+        <div className="d-flex bcol" >
           <div className='restaurant'>Restaurants</div>
           <div className="searchdesign">
             <div className="search">
@@ -227,10 +228,13 @@ const Home = () => {
             </div>
           </div>
         </div>
-      
+   
         {showspin ? (
+         
           <Spiner />
-        ) : (
+         
+        )  : (
+          
           <Tables
             userdata={userdata}
             deleteUser={deleteUser}
@@ -242,6 +246,7 @@ const Home = () => {
             setPage={setPage}
           />
         )}
+        
       </div>
       <ToastContainer /> {/* Toast notifications container */}
     </div>
